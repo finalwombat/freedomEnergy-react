@@ -19,8 +19,12 @@ export default class Menu extends Component {
       <Router>
         <div>
           <Link to="/"><img src="logo.png" className="logo" onClick={this.handleItemClick}/></Link>
-          <SemanticMenu pointing secondary>
-            <Link to="/residential"><SemanticMenu.Item name='residential' active={activeItem === 'residential'} onClick={this.handleItemClick}/></Link>
+          <SemanticMenu secondary pointing >
+            <Link to="/residential">
+              <SemanticMenu.Item name='residential'
+                active={activeItem === 'residential'}
+                onClick={this.handleItemClick}/>
+            </Link>
             <Link to="/commercial"><SemanticMenu.Item name='commercial' active={activeItem === 'commercial'} onClick={this.handleItemClick}/></Link>
             <Link to="/utilities"><SemanticMenu.Item name='utilities' active={activeItem === 'utilities'} onClick={this.handleItemClick}/></Link>
             <Link to="/contact"><SemanticMenu.Item name='contact' active={activeItem === 'contact'} onClick={this.handleItemClick}/></Link>

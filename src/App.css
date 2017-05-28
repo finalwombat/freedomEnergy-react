@@ -13,3 +13,13 @@
   padding-left: 400px;
   padding-right: 50px;
 }
+
+.ui.secondary.pointing.menu .dropdown.item:hover,
+.ui.secondary.pointing.menu .link.item:hover,
+.ui.secondary.pointing.menu a.item:hover {
+  background-color: transparent;
+box-shadow: none;
+border-color: #1B1C1D;
+font-weight: bold;
+color: rgba(0, 0, 0, 0.95);
+}
