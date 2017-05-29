@@ -1,0 +1,78 @@
+/* Slider */
+.slider {
+  height: 400px;
+  width: 100%;
+  background: #ddd;
+  position: absolute;
+}
+
+.slide {
+  height: 100%;
+  width: 100%;
+  animation: slide 10s forwards;
+}
+
+.slide-in {
+  animation: slide-in 2s forwards;
+}
+
+.slide-out {
+  animation: slide-out 0.5s forwards;
+}
+
+@keyframes slide-in
+{
+  100% { transform: translateX(0%);}
+}
+
+@@keyframes slide-out {
+  0% { transform: translateX(0%);}
+  100% { transform: translateX(-100%);}
+}
+
+.dotsContainer {
+  position: absolute;
+  bottom: 7%;
+  width: 100%;
+  text-align: center;
+  z-index: 99999;
+}
+.dotsContainer .dot {
+  background: #222;
+  padding: 0px 8px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 120px;
+}
+.dotsContainer .current {
+  background: #fff;
+}
+
+
+.nextArrow {
+  position: absolute;
+  top: 80%;
+  right: 30%;
+  cursor: pointer;
+  transition: all ease-in .2s;
+  color: #fff;
+}
+.nextArrow:hover {
+  opacity: 0.5;
+  transform: scale(1.4);
+  transition: all ease-in .2s;
+}
+
+.backArrow {
+  position: absolute;
+  top: 80%;
+  left: 30%;
+  cursor: pointer;
+  transition: all ease-in .2s;
+  color: #fff;
+}
+.backArrow:hover {
+  opacity: 0.5;
+  transform: scale(1.4);
+  transition: all ease-in .2s;
+}

@@ -1,9 +1,10 @@
 import React from 'react'
+import Slider from './imageSlider/Slider'
 
 const Home = () => {
   return (
     <div>
-      <img src="projectdev1.jpg" />
+      <Slider />
     </div>
   )
 
