@@ -16,7 +16,7 @@ export default class Menu extends Component {
   render(){
     const {activeItem} = this.state
     return (
-      <Router>
+
         <div>
           <Link to="/"><img src="logo.png" className="logo" onClick={this.handleItemClick}/></Link>
           <SemanticMenu secondary pointing >
@@ -29,15 +29,7 @@ export default class Menu extends Component {
             <Link to="/utilities"><SemanticMenu.Item name='utilities' active={activeItem === 'utilities'} onClick={this.handleItemClick}/></Link>
             <Link to="/contact"><SemanticMenu.Item name='contact' active={activeItem === 'contact'} onClick={this.handleItemClick}/></Link>
           </SemanticMenu>
-          <div>
-          <Route exact path="/" component={Home}/>
-          <Route path="/residential" component={Residential}/>
-          <Route path="/commercial" component={Commercial}/>
-          <Route path="/utilities" component={Utilities}/>
-          <Route path="/Contact" component={Contact}/>
-          </div>
         </div>
-      </Router>
 
     )
 
