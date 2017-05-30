@@ -1,8 +1,9 @@
 import React from 'react'
+import image from '../public/images/commerce1.jpg'
 
 const Commercial = () => {
   return (
-    <div><h2>Commercial</h2></div>
+    <div><img src={image} /></div>
   )
 
 }

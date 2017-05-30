@@ -1,8 +1,10 @@
 import React from 'react'
+import Image from '../public/images/1.jpg'
 
+console.log(Image)
 const Residential = () => {
   return (
-    <div><h2>Residential</h2></div>
+    <div><img src={Image} alt=""/></div>
   )
 
 }

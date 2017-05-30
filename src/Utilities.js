@@ -1,8 +1,9 @@
 import React from 'react'
+import image from '../public/images/projectdev1.jpg'
 
 const utilities = () => {
   return (
-    <div><h2>utilities</h2></div>
+    <div><img src={image} /></div>
   )
 
 }
