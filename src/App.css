@@ -27,3 +27,28 @@ border-color: #1B1C1D;
 font-weight: bold;
 color: rgba(0, 0, 0, 0.95);
 }
+
+.footer {
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-top: 30px;
+  padding: 30px;
+  display: flex;
+}
+
+.links {
+  margin: auto;
+  display: flex;
+
+}
+
+.footer h1, h3 {
+    color: white;
+    padding: 5px;
+  }
+
+  .footer h1:hover, h3:hover {
+      color: grey;
+    }

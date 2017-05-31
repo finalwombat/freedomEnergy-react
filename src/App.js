@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Menu from './Menu'
 import { BrowserRouter as Router, Route, Link} from 'react-router-dom'
+import Footer from './Footer'
 import Home from './Home'
 import Residential from './Residential'
 import Commercial from './Commercial'
@@ -22,6 +23,7 @@ class App extends Component {
               <Route path="/utilities" component={Utilities}/>
               <Route path="/Contact" component={Contact}/>
             </div>
+            <Footer />
           </div>
       </Router>
       </div>
