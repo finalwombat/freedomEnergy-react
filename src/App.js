@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
 import Menu from './Menu'
 import { BrowserRouter as Router, Route, Link} from 'react-router-dom'
+import Routes from './Routes'
 import Footer from './Footer'
-import Home from './Home'
-import Residential from './Residential'
-import Commercial from './Commercial'
-import Utilities from './Utilities'
-import Contact from './Contact'
 import './App.css';
 
 class App extends Component {
@@ -14,17 +10,11 @@ class App extends Component {
     return (
       <div className="App">
       <Router>
-          <div>
-            <Menu />
-            <div className="main">
-              <Route exact path="/" component={Home}/>
-              <Route path="/residential" component={Residential}/>
-              <Route path="/commercial" component={Commercial}/>
-              <Route path="/utilities" component={Utilities}/>
-              <Route path="/Contact" component={Contact}/>
-            </div>
-            <Footer />
-          </div>
+        <div>
+          <Menu />
+          <Routes />
+          <Footer />
+        </div>
       </Router>
       </div>
     );
