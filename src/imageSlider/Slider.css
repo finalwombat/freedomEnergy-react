@@ -9,25 +9,13 @@
 .slide {
   height: 100%;
   width: 100%;
-  animation: slide 10s forwards;
 }
 
-.slide-in {
-  animation: slide-in 2s forwards;
-}
-
-.slide-out {
-  animation: slide-out 0.5s forwards;
-}
-
-@keyframes slide-in
-{
-  100% { transform: translateX(0%);}
-}
-
-@@keyframes slide-out {
-  0% { transform: translateX(0%);}
-  100% { transform: translateX(-100%);}
+.contactButton {
+  position: absolute;
+  bottom: 15%;
+  width: 100%;
+  text-align: center;
 }
 
 .dotsContainer {
@@ -75,4 +63,22 @@
   opacity: 0.5;
   transform: scale(1.4);
   transition: all ease-in .2s;
+}
+
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
 }

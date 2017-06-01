@@ -1,10 +1,13 @@
 import React, {Component} from 'react'
+import { Button } from 'semantic-ui-react'
 import './Slider.css'
 import axios from 'axios'
 import Slide from './Slide'
 import Dots from './Dots'
 import LeftArrow from './LeftArrow'
 import RightArrow from './RightArrow'
+
+import { CSSTransitionGroup } from 'react-transition-group'
 
 export default class Slider extends Component {
   constructor(props){
@@ -51,14 +54,21 @@ export default class Slider extends Component {
       <div className="slider">
         {
           this.state.ready ?
-          <Slide
-            background={this.state.background}
-            current={this.state.current}
-            ready={this.state.ready}
-            className={this.state.slideIn ? 'slide-in' : 'slide-out' }
-          />
+          <CSSTransitionGroup
+            transitionName="example"
+            transitionEnterTimeout={500}
+            transitionLeaveTimeout={300}>
+            <Slide
+              key={this.state.current}
+              background={this.state.background}
+              current={this.state.current}
+              ready={this.state.ready}
+              className={this.state.slideIn ? 'slide-in' : 'slide-out' }
+            />
+          </CSSTransitionGroup>
           : null
         }
+        <div className='contactButton'><Button color='green'>Contact Us</Button></div>
         <RightArrow nextSlide={this.nextSlide} />
         <LeftArrow previousSlide={this.previousSlide} />
         <Dots
