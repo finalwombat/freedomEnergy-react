@@ -1,4 +1,5 @@
 import React from 'react'
+import { FadeIn } from 'animate-components'
 
 const Slide = (props) => {
 
@@ -9,8 +10,10 @@ const Slide = (props) => {
     backgroundPosition: 'center'
   }
   return (
+    <FadeIn duration='2s' timingFunction='ease-in'>
     <div style={background} className="slide">
     </div>
+    </FadeIn>
   )
 }
 
