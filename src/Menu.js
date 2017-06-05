@@ -17,7 +17,7 @@ export default class Menu extends Component {
     const {activeItem} = this.state
     return (
 
-        <div>
+        <div className="mainMenu">
           <Link to="/"><img src="logo.png" className="logo" onClick={this.handleItemClick}/></Link>
           <SemanticMenu secondary pointing >
             <Link to="/residential">
