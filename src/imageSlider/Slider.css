@@ -2,13 +2,11 @@
 .slider {
   height: 400px;
   width: 100%;
-  background: #ddd;
-  position: absolute;
+  position: relative;
 }
 
 .slide {
   height: 400px;
-  width: 1600px;
 }
 
 .contactButton {
