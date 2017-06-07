@@ -13,7 +13,11 @@
   height: 100%;
 }
 
+.mainContent {
+  margin-top: 10px;
+}
 
+/* Home page */
 .homeContainer {
   max-width: 1600px;
   height: inherit;
@@ -28,10 +32,6 @@
   height: 400px;
 }
 
-.mainContent {
-  margin-top: 10px;
-}
-
 .cards {
   margin-left: 200px;
   margin-right: 200px;
@@ -39,7 +39,19 @@
   align-items: baseline;
   justify-content: space-between;
 }
+/* contact page */
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 
+}
+
+.contactForm {
+  display: flex;
+}
 /* Menu */
 .logo {
   float: left;
