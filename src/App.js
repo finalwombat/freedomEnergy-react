@@ -18,7 +18,6 @@ class App extends Component {
   setLocation(name){
     const location = name ? name : this.getLocation()
     this.setState({location})
-    console.log(this.state)
   }
 
   componentWillMount(){
