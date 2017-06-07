@@ -24,13 +24,13 @@ const Home = (props) => {
           <Card>
             <Image src='../public/images/commerce1.jpg' />
             <Card.Content>
-              <Card.Header name='/commercial'><Link to='/commercial'>Commercial</Link></Card.Header>
+              <Card.Header onClick={handleItemClick} name='/commercial'><Link to='/commercial'>Commercial</Link></Card.Header>
             </Card.Content>
           </Card>
           <Card>
             <Image src='../public/images/commerce1.jpg' />
             <Card.Content>
-              <Card.Header name='/utilities'><Link to='/utilities'>Utilities</Link></Card.Header>
+              <Card.Header onClick={handleItemClick} name='/utilities'><Link to='/utilities'>Utilities</Link></Card.Header>
             </Card.Content>
           </Card>
         </div>
