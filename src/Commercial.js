@@ -3,7 +3,7 @@ import image from '../public/images/commerce1.jpg'
 
 const Commercial = () => {
   return (
-    <div><img src={image} /></div>
+    <div><img src={image} alt='commercial'/></div>
   )
 
 }
