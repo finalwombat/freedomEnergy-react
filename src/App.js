@@ -30,8 +30,8 @@ class App extends Component {
       <Router>
         <div className="App">
           <Menu handleItemClick={this.setLocation} location={this.state.location}/>
-          <Routes setLocation={this.setLocation}/>
-          <Footer setLocation={this.setLocation}/>
+          <Routes handleItemClick={this.setLocation}/>
+          <Footer handleItemClick={this.setLocation}/>
         </div>
       </Router>
     );
