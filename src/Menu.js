@@ -1,22 +1,15 @@
 import React, {Component} from 'react'
 import { Menu as SemanticMenu} from 'semantic-ui-react'
-import { BrowserRouter as Router, Route, Link} from 'react-router-dom'
-import Home from './Home'
-import Residential from './Residential'
-import Commercial from './Commercial'
-import Utilities from './Utilities'
-import Contact from './Contact'
+import { Link } from 'react-router-dom'
 
 
 export default class Menu extends Component {
   constructor(props){
     super(props)
     this.state = { activeItem: this.props.location }
-    console.log(this.props)
   }
 
   componentWillReceiveProps(nextProps){
-    console.log(nextProps)
     this.setState({activeItem: nextProps.location})
   }
 
