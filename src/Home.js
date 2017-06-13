@@ -2,13 +2,14 @@ import React from 'react'
 import Slider from './imageSlider/Slider'
 import { Card, Image } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
-import residentialImage from '../public/images/commerce1.jpg'
-import commercialImage from '../public/images/commerce1.jpg'
-import utilityImage from '../public/images/commerce1.jpg'
+import residentialImage from '../public/images/solar_house.jpg'
+import commercialImage from '../public/images/solar_commercial.jpg'
+import utilityImage from '../public/images/solar_utility.jpg'
 
 const Home = (props) => {
 
-  const handleItemClick = (e, { name }) => {
+  const handleItemClick = (e) => {
+  const name = e.target.name
   props.handleItemClick(name)
   }
 
@@ -17,24 +18,15 @@ const Home = (props) => {
       <Slider />
       <div className="mainContent">
         <div className="cards">
-          <Card>
-            <Image src={residentialImage} />
-            <Card.Content>
-              <Card.Header onClick={handleItemClick} name='/residential'><Link to='/residential'>Residential</Link></Card.Header>
-            </Card.Content>
-          </Card>
-          <Card>
-            <Image src={commercialImage} />
-            <Card.Content>
-              <Card.Header onClick={handleItemClick} name='/commercial'><Link to='/commercial'>Commercial</Link></Card.Header>
-            </Card.Content>
-          </Card>
-          <Card>
-            <Image src={utilityImage}/>
-            <Card.Content>
-              <Card.Header onClick={handleItemClick} name='/utilities'><Link to='/utilities'>Utilities</Link></Card.Header>
-            </Card.Content>
-          </Card>
+          <div className="card">
+            <Link to='/residential'><Image src={residentialImage} onClick={handleItemClick} name='/residential'/>
+              <h2>Residential</h2>
+            </Link>
+          </div>
+          <div className="card">
+            <Link to='/commercial'><Image src={commercialImage} onClick={handleItemClick} name='/commercial'/><h2>Commercial</h2></Link>
+          </div>
+          <div className="card"><Link to='/utilities'><Image src={utilityImage} onClick={handleItemClick} name='/utilities'/><h2>Utilities</h2></Link></div>
         </div>
       </div>
     </div>
