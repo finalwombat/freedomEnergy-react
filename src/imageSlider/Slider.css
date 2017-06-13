@@ -1,12 +1,12 @@
 /* Slider */
 .slider {
-  height: 800px;
+  max-height: 800px;
   width: 100%;
   position: relative;
 }
 
 .slide {
-  height: 800px;
+   height: 800px;
 }
 
 .contactButton {
