@@ -9,9 +9,11 @@ const Slide = (props) => {
     backgroundSize: 'cover',
     backgroundPosition: 'center'
   }
+  const heading = props.heading
   return (
     <FadeIn duration='2s' timingFunction='ease-in'>
     <div style={background} className="slide">
+      <h1>{heading}</h1>
     </div>
     </FadeIn>
   )

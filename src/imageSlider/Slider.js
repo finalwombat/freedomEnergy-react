@@ -17,7 +17,9 @@ export default class Slider extends Component {
       current: undefined,
       ready: false,
       slideIn: false,
-      slideInterval: null
+      slideInterval: null,
+      headings: [],
+      text: []
     }
 
     this.nextSlide = this.nextSlide.bind(this)
@@ -29,6 +31,7 @@ export default class Slider extends Component {
     axios.get('slider-config.json')
     .then((res) => {
       this.setImageArray(res.data)
+      this.setHeadings(res.data)
       this.slideInterval = this.autoSlide()
     })
     this.setState({slideIn: true})
@@ -39,13 +42,21 @@ export default class Slider extends Component {
     clearInterval(this.slideInterval)
   }
 
-  setImageArray(imageArray) {
+  setImageArray(config) {
 
-    const newArray = imageArray.map(item => {
+    const newArray = config.map(item => {
       return item.image;
     })
 
     this.setState({ background: newArray, current: 0, ready: true})
+  }
+
+  setHeadings(config) {
+    const headings = config.map(item => {
+      return item.heading;
+    })
+
+    this.setState({headings})
   }
 
   render(){
@@ -59,6 +70,7 @@ export default class Slider extends Component {
               current={this.state.current}
               ready={this.state.ready}
               className={this.state.slideIn ? 'slide-in' : 'slide-out' }
+              heading={this.state.headings[this.state.current]}
             />
           : null
         }
