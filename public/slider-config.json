@@ -1,11 +1,14 @@
 [
   {
-    "image": "./images/projectdev1.jpg"
+    "image": "./images/projectdev1.jpg",
+    "heading": "Residential Solar"
   },
   {
-    "image": "./images/projectdev2.jpg"
+    "image": "./images/projectdev2.jpg",
+    "heading": "Commercial Solar"
   },
   {
-    "image": "./images/projectdev3.jpg"
+    "image": "./images/projectdev3.jpg",
+    "heading": "Utility Solar"
   }
 ]
