@@ -16,6 +16,9 @@
   text-align: center;
 }
 
+button.ui.button {
+  background-color: #BADA55;
+}
 .dotsContainer {
   position: absolute;
   bottom: 7%;

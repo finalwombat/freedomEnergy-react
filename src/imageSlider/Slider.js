@@ -62,7 +62,7 @@ export default class Slider extends Component {
             />
           : null
         }
-        <div className='contactButton'><Button color='green'>Contact Us</Button></div>
+        <div className='contactButton'><Button size='big'>Contact Us</Button></div>
         <RightArrow nextSlide={this.nextSlide} />
         <LeftArrow previousSlide={this.previousSlide} />
         <Dots
