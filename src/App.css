@@ -127,8 +127,9 @@ html, body {
 }
 /* Menu */
 .logo {
+  background-color: #BADA55;
   float: left;
-  padding-left: 200px;
+  padding-left: 100px;
   padding-right: 20px;
   border: 2px solid lightgrey;
 }
@@ -138,14 +139,18 @@ html, body {
   padding-right: 50px;
 }
 
+.ui.secondary.pointing.menu {
+    border-bottom: 0px;
+}
+
 .ui.secondary.pointing.menu .dropdown.item:hover,
 .ui.secondary.pointing.menu .link.item:hover,
 .ui.secondary.pointing.menu a.item:hover {
   background-color: transparent;
-box-shadow: none;
-border-color: #1B1C1D;
-font-weight: bold;
-color: rgba(0, 0, 0, 0.95);
+  box-shadow: none;
+  border-color: #1B1C1D;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.95);
 }
 
 .footer {
