@@ -127,7 +127,7 @@ html, body {
 }
 /* Menu */
 .logo {
-  background-color: #BADA55;
+  background-color: #BADB90;
   float: left;
   padding-left: 100px;
   padding-right: 20px;
@@ -139,8 +139,16 @@ html, body {
   padding-right: 50px;
 }
 
+a.item.call {
+  background-color: #BADA55;
+}
+
 .ui.secondary.pointing.menu {
     border-bottom: 0px;
+}
+
+.ui.secondary.pointing.menu .item.call {
+    color: #BADA55;
 }
 
 .ui.secondary.pointing.menu .dropdown.item:hover,
@@ -148,7 +156,25 @@ html, body {
 .ui.secondary.pointing.menu a.item:hover {
   background-color: transparent;
   box-shadow: none;
-  border-color: #1B1C1D;
+  border-color: #BADA55;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.95);
+}
+
+.ui.secondary.pointing.menu .dropdown.item.call:hover,
+.ui.secondary.pointing.menu .link.item.call:hover,
+.ui.secondary.pointing.menu a.item.call:hover {
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  font-weight: bold;
+  color: #BADB90
+}
+
+.ui.secondary.pointing.menu .item.active {
+  background-color: transparent;
+  box-shadow: none;
+  border-color: #BADB90;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.95);
 }
