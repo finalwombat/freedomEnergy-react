@@ -1,5 +1,5 @@
 import React from 'react'
-import image from '../public/images/projectdev1.jpg'
+import image from '../public/images/projectdev3.jpg'
 
 const utilities = () => {
   return (
