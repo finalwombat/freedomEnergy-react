@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from '../public/images/house1_croped.jpeg'
+import Image from '../public/images/solar_house.jpg'
 
 const Residential = () => {
   return (
