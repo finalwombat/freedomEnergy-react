@@ -21,12 +21,21 @@ const Home = (props) => {
           <div className="card">
             <Link to='/residential'><Image src={residentialImage} onClick={handleItemClick} name='/residential'/>
               <h2>Residential</h2>
+              <h3>Take control of your electricity bill with Freedom Solar</h3>
             </Link>
           </div>
           <div className="card">
-            <Link to='/commercial'><Image src={commercialImage} onClick={handleItemClick} name='/commercial'/><h2>Commercial</h2></Link>
+            <Link to='/commercial'><Image src={commercialImage} onClick={handleItemClick} name='/commercial'/>
+              <h2>Commercial</h2>
+              <h3>Cash flow positive energy solutions with $0 up front cost</h3>
+            </Link>
           </div>
-          <div className="card"><Link to='/utilities'><Image src={utilityImage} onClick={handleItemClick} name='/utilities'/><h2>Utilities</h2></Link></div>
+          <div className="card">
+            <Link to='/utilities'><Image src={utilityImage} onClick={handleItemClick} name='/utilities'/>
+              <h2>Utilities</h2>
+              <h3>Creating a better grid with renewable energy solutions</h3>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
