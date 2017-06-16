@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import { Button } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
 import './Slider.css'
 import axios from 'axios'
 import Slide from './Slide'
@@ -84,7 +85,8 @@ export default class Slider extends Component {
             />
           : null
         }
-        <div className='contactButton'><Button color='green'>Contact Us</Button></div>
+
+        <Link to="/contact"><div className='contactButton'><Button size='big'>Contact Us</Button></div></Link>
         <Dots
           numberOfDots={this.state.background.length}
           isCurrent={this.state.current}

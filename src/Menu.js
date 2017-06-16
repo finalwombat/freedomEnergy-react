@@ -23,12 +23,15 @@ export default class Menu extends Component {
     return (
 
         <div className="mainMenu">
-          <Link to="/" name='/'><img src="logo.png" alt='logo' className="logo"  onClick={this.handleItemClick}/></Link>
-          <SemanticMenu secondary pointing >
+          <Link to="/" name='/'><img src="logo2.png" alt='logo' className="logo"  onClick={this.handleItemClick}/></Link>
+          <SemanticMenu secondary pointing size='large'>
             <Link to="/residential"><SemanticMenu.Item name='/residential'active={activeItem === '/residential'} onClick={this.handleItemClick}/></Link>
             <Link to="/commercial"><SemanticMenu.Item name='/commercial' active={activeItem === '/commercial'} onClick={this.handleItemClick}/></Link>
             <Link to="/utilities"><SemanticMenu.Item name='/utilities' active={activeItem === '/utilities'} onClick={this.handleItemClick}/></Link>
             <Link to="/contact"><SemanticMenu.Item name='/contact' active={activeItem === '/contact'} onClick={this.handleItemClick}/></Link>
+            <SemanticMenu.Menu position='right'>
+              <SemanticMenu.Item href='tel:+1300695644' title="Call Freedom Solar" className='call' name='1300 695 644' color='green'/>
+            </SemanticMenu.Menu>
           </SemanticMenu>
         </div>
 
