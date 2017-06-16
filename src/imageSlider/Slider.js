@@ -32,6 +32,7 @@ export default class Slider extends Component {
     .then((res) => {
       this.setImageArray(res.data)
       this.setHeadings(res.data)
+      this.setText(res.data)
       this.slideInterval = this.autoSlide()
     })
     this.setState({slideIn: true})
@@ -59,6 +60,14 @@ export default class Slider extends Component {
     this.setState({headings})
   }
 
+  setText(config) {
+    const text = config.map(item => {
+      return item.text
+    })
+
+    this.setState({text})
+  }
+
   render(){
     return (
       <div className="slider">
@@ -71,17 +80,18 @@ export default class Slider extends Component {
               ready={this.state.ready}
               className={this.state.slideIn ? 'slide-in' : 'slide-out' }
               heading={this.state.headings[this.state.current]}
+              text={this.state.text[this.state.current]}
             />
           : null
         }
         <div className='contactButton'><Button color='green'>Contact Us</Button></div>
-        <RightArrow nextSlide={this.nextSlide} />
-        <LeftArrow previousSlide={this.previousSlide} />
         <Dots
           numberOfDots={this.state.background.length}
           isCurrent={this.state.current}
           dotClick={this.dotClick}
         />
+        <RightArrow nextSlide={this.nextSlide} />
+        <LeftArrow previousSlide={this.previousSlide} />
       </div>
     )
   }
