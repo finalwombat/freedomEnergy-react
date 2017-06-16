@@ -1,14 +1,17 @@
 [
   {
     "image": "./images/projectdev1.jpg",
-    "heading": "Residential Solar"
+    "heading": "Residential Solar",
+    "text": "Switch to solar and create your own clean energy, simple!"
   },
   {
     "image": "./images/projectdev2.jpg",
-    "heading": "Commercial Solar"
+    "heading": "Commercial Solar",
+    "text": "Cash flow positive energy soloutions with $0 up front cost"
   },
   {
     "image": "./images/projectdev3.jpg",
-    "heading": "Utility Solar"
+    "heading": "Utility Solar",
+    "text": "Integrated project development"
   }
 ]
