@@ -1,21 +1,22 @@
 /* Slider */
 .slider {
-  max-height: 800px;
+  height: 100%;
   width: 100%;
   position: relative;
 }
 
 .slide {
-   height: 800px;
+  height: 100vh;
 }
 
 .slide h1 {
   font-size: 60px;
   position: absolute;
-  width: 100%;
+  width: 100vw;
   color: white;
   text-align: center;
   top: 50%;
+  padding: 5px;
 }
 
 .slide h2 {
@@ -25,6 +26,7 @@
   color: white;
   text-align: center;
   top: 55%;
+  padding: 5px;
 }
 
 .contactButton {
