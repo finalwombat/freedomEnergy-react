@@ -6,34 +6,28 @@
 }
 
 .slide {
-  height: 100vh;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }
 
+.slide > * {
+  border: 1px solid red;
+}
 .slide h1 {
   font-size: 60px;
-  position: absolute;
-  width: 100vw;
   color: white;
-  text-align: center;
-  top: 50%;
-  padding: 5px;
 }
 
 .slide h2 {
   font-size: 30px;
-  position: absolute;
-  width: 100%;
   color: white;
-  text-align: center;
-  top: 55%;
-  padding: 5px;
 }
 
 .contactButton {
-  position: absolute;
-  top: 65%;
-  width: 100%;
-  text-align: center;
 }
 
 button.ui.button {
