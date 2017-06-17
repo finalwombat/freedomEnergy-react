@@ -1,4 +1,6 @@
 import React from 'react'
+import { Button } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
 import { FadeIn } from 'animate-components'
 
 const Slide = (props) => {
@@ -16,6 +18,7 @@ const Slide = (props) => {
     <div style={background} className="slide">
       <h1>{heading}</h1>
       <h2>{text}</h2>
+      <Link to="/contact"><div className='contactButton'><Button size='big'>Contact Us</Button></div></Link>
     </div>
     </FadeIn>
   )
