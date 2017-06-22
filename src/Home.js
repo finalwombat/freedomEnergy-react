@@ -6,6 +6,18 @@ import residentialImage from '../public/images/solar_house.jpg'
 import commercialImage from '../public/images/solar_commercial.jpg'
 import utilityImage from '../public/images/solar_utility.jpg'
 
+const residentialBackground = {
+  backgroundImage: `url(${residentialImage})`,
+}
+
+const commercialBackground = {
+  backgroundImage: `url(${commercialImage})`
+}
+
+const utilityBackground = {
+  backgroundImage: `url(${utilityImage})`
+}
+
 const Home = (props) => {
 
   const handleItemClick = (e) => {
@@ -16,28 +28,26 @@ const Home = (props) => {
   return (
     <div className="homeContainer">
       <Slider />
-      <div className="mainContent">
         <div className="cards">
-          <div className="card">
-            <Link to='/residential'><Image src={residentialImage} onClick={handleItemClick} name='/residential'/>
+        <Link to='/residential'>
+          <div className="card" style={residentialBackground} onClick={handleItemClick} name='/residential'>
               <h2>Residential</h2>
               <h3>Take control of your electricity bill with Freedom Solar</h3>
-            </Link>
           </div>
-          <div className="card">
-            <Link to='/commercial'><Image src={commercialImage} onClick={handleItemClick} name='/commercial'/>
+        </Link>
+        <Link to='/commercial'>
+          <div className="card" style={commercialBackground} onClick={handleItemClick} name='/commercial'>
               <h2>Commercial</h2>
               <h3>Cash flow positive energy solutions with $0 up front cost</h3>
-            </Link>
           </div>
-          <div className="card">
-            <Link to='/utilities'><Image src={utilityImage} onClick={handleItemClick} name='/utilities'/>
+        </Link>
+        <Link to='/utilities'>
+          <div className="card" style={utilityBackground} onClick={handleItemClick} name='/utilities'>
               <h2>Utilities</h2>
               <h3>Creating a better grid with renewable energy solutions</h3>
-            </Link>
           </div>
+        </Link>
         </div>
-      </div>
     </div>
   )
 
