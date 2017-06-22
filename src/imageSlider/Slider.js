@@ -80,17 +80,20 @@ export default class Slider extends Component {
               className={this.state.slideIn ? 'slide-in' : 'slide-out' }
               heading={this.state.headings[this.state.current]}
               text={this.state.text[this.state.current]}
+              dots={  <Dots
+                  numberOfDots={this.state.background.length}
+                  isCurrent={this.state.current}
+                  dotClick={this.dotClick}
+                />}
+              leftArrow={
+                <LeftArrow previousSlide={this.previousSlide} />
+              }
+              rightArrow={
+                <RightArrow nextSlide={this.nextSlide} />
+              }
             />
           : null
         }
-
-        <Dots
-          numberOfDots={this.state.background.length}
-          isCurrent={this.state.current}
-          dotClick={this.dotClick}
-        />
-        <RightArrow nextSlide={this.nextSlide} />
-        <LeftArrow previousSlide={this.previousSlide} />
       </div>
     )
   }
@@ -123,7 +126,7 @@ export default class Slider extends Component {
 
   autoSlide() {
     return (
-      setInterval( () => { this.nextSlide()}, 8000 )
+      setInterval( () => {})
     )
 
   }

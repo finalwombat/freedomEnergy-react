@@ -1,22 +1,16 @@
 /* Slider */
-.slider {
-  height: 100%;
-  width: 100%;
-  position: relative;
-}
 
+.slider div {
+  width: 100%;
+}
 .slide {
-  height: 50vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
-.slide > * {
-  border: 1px solid red;
-}
 .slide h1 {
   font-size: 60px;
   color: white;
@@ -33,12 +27,18 @@
 button.ui.button {
   background-color: #BADA55;
 }
+
+.slidernav {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .dotsContainer {
-  position: absolute;
-  bottom: 7%;
-  width: 100%;
+  flex-basis: 10vw;
   text-align: center;
-  z-index: 2;
+  align-self: baseline;
 }
 .dotsContainer .dot {
   background: #222;
@@ -53,9 +53,7 @@ button.ui.button {
 
 
 .nextArrow {
-  position: absolute;
-  bottom: 7%;
-  right: 40%;
+  flex-basis: 5vw;
   cursor: pointer;
   transition: all ease-in .2s;
   color: #fff;
@@ -68,9 +66,7 @@ button.ui.button {
 }
 
 .backArrow {
-  position: absolute;
-  bottom: 7%;
-  left: 40%;
+  flex-basis: 5vw;
   cursor: pointer;
   transition: all ease-in .2s;
   color: #fff;

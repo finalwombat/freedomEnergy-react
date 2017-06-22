@@ -6,6 +6,9 @@ import { FadeIn } from 'animate-components'
 const Slide = (props) => {
 
   const current = props.background[props.current]
+  const dots = props.dots
+  const LeftArrow = props.leftArrow
+  const RightArrow = props.rightArrow
   const background = {
     backgroundImage: `url(${current})`,
     backgroundSize: 'cover',
@@ -19,6 +22,12 @@ const Slide = (props) => {
       <h1>{heading}</h1>
       <h2>{text}</h2>
       <Link to="/contact"><div className='contactButton'><Button size='big'>Contact Us</Button></div></Link>
+      <div className="slidernav">
+        {LeftArrow}
+        {dots}
+        {RightArrow}
+      </div>
+
     </div>
     </FadeIn>
   )
