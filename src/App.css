@@ -25,46 +25,52 @@ html, body {
 }
 
 .mainContent {
-
 }
 
 /* Home page */
+
 .homeContainer {
-  height: inherit;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+  height: 100%;
 }
 
-.cards {
+.slider {
+  height: 60vh;
+  width: 100vw;
   display: flex;
-  align-items: baseline;
-}
-
-.card  {
-  position: relative;
   flex-grow: 1;
 }
 
-.card Image {
-  position: relative;
+.cards {
+  height: 300px;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
 }
 
+.cards a {
+  background-repeat: no-repeat;
+  flex-grow: 1;
+}
+.card  {
+  min-width: 300px;
+  height: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card > * {
+  border: 1px solid red;
+}
 .card h2 {
   color: white;
-  position: absolute;
-  bottom: 75%;
-  width: 100%;
-  text-align: center;
 }
 
 .card h3 {
   color: white;
-  position: absolute;
-  bottom: 70%;
-  width: 100%;
-  text-align: center;
 }
 
 /* contact page */
