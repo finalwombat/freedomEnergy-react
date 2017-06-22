@@ -126,7 +126,7 @@ export default class Slider extends Component {
 
   autoSlide() {
     return (
-      setInterval( () => {})
+      setInterval( () => {this.nextSlide(); console.log('nextSlide')}, 8000)
     )
 
   }
